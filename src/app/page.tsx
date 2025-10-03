@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Navigation from '@/components/Navigation';
+import { TypeAnimation } from 'react-type-animation';
 import { 
   Heart, 
   Dumbbell, 
@@ -107,11 +108,31 @@ export default function Home() {
               />
             </div>
             <h1 className="text-5xl sm:text-6xl font-bold mb-6" style={{ color: theme.colors.primary[900] }}>
-              Physiotherapy Ontology Engine
+              Physiotherapy Knowledge Engine
             </h1>
-            <p className="text-lg mb-16 max-w-2xl mx-auto leading-relaxed" style={{ color: theme.colors.primary[600] }}>
-              Clinical knowledge graph for evidence-based physiotherapy rehabilitation
-            </p>
+            <div className="text-lg mb-16 max-w-3xl mx-auto leading-relaxed h-16" style={{ color: theme.colors.primary[600] }}>
+              <TypeAnimation
+                sequence={[
+                  'Analyzing 2,000+ therapeutic exercises for optimal treatment',
+                  2000,
+                  'Mapping evidence-based protocols across 200 conditions',
+                  2000,
+                  'Connecting conditions, exercises, and equipment intelligently',
+                  2000,
+                  'Building AI-powered physiotherapy recommendations',
+                  2000,
+                  'Transforming clinical data into actionable insights',
+                  2000,
+                  'Your partner in evidence-based rehabilitation',
+                  2000,
+                ]}
+                wrapper="p"
+                speed={50}
+                repeat={Infinity}
+                cursor={true}
+                style={{ display: 'inline-block' }}
+              />
+            </div>
 
             {/* Search Bar */}
             <div className="max-w-xl mx-auto mb-20">

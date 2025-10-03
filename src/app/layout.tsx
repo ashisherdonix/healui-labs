@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { MantineProvider } from '@mantine/core';
-import AuthHeader from "@/components/AuthHeader";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HealUI - Private Platform",
-  description: "Private medical intelligence platform",
+  title: "Physiotherapy Knowledge Engine",
+  description: "AI-powered clinical intelligence platform for evidence-based physiotherapy",
   robots: {
     index: false,
     follow: false,
@@ -43,7 +42,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <MantineProvider>
-          <AuthHeader />
           {children}
         </MantineProvider>
       </body>
